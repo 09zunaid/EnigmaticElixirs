@@ -20,7 +20,7 @@ export default {
       fontFamily: {
         body: ['Cormorant Garamond', 'serif'],
         headline: ['Cinzel', 'serif'],
-        brand: ['Bonheur Royale', 'cursive'],
+        brand: ['DM Sans', 'sans-serif'],
         code: ['monospace'],
       },
       colors: {
