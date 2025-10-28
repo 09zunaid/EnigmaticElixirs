@@ -21,10 +21,10 @@ import {
 import { motion } from 'framer-motion';
 
 const navItems = [
-  { href: '/create', label: 'Create', icon: <Wand2 /> },
-  { href: '/ingredients', label: 'Ingredients', icon: <BookOpen /> },
-  { href: '/consultation', label: 'Consultation', icon: <Calendar /> },
-  { href: '/gift-card', label: 'Gift Card', icon: <Gift /> },
+  { href: '/create', label: 'Create' },
+  { href: '/ingredients', label: 'Ingredients' },
+  { href: '/consultation', label: 'Consultation' },
+  { href: '/gift-card', label: 'Gift Card' },
 ];
 
 export function Header() {
@@ -37,13 +37,12 @@ export function Header() {
         key={item.href}
         href={item.href}
         className={cn(
-          'relative rounded-md px-3 py-2 text-base font-medium text-foreground/80 transition-colors hover:text-accent-foreground flex items-center gap-2',
+          'relative rounded-md px-3 py-2 text-base font-medium text-foreground/80 transition-colors hover:text-accent-foreground',
           isMobile ? 'w-full text-lg' : 'text-lg'
         )}
         onMouseOver={() => setHoveredPath(item.href)}
         onMouseLeave={() => setHoveredPath(pathname)}
       >
-        {item.icon}
         <span className="relative z-10">{item.label}</span>
         {item.href === hoveredPath && (
           <motion.div
