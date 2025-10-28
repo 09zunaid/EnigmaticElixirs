@@ -52,8 +52,8 @@ export function Footer() {
         <div className="mt-12 pt-8 border-t border-border flex flex-col sm:flex-row justify-between items-center text-sm text-muted-foreground">
           <p>&copy; {new Date().getFullYear()} Enigmatic Elixirs. All Rights Reserved.</p>
           <div className="flex items-center gap-4 mt-4 sm:mt-0">
-            <Link href="#" className="hover:text-accent transition-colors">Privacy Policy</Link>
-            <Link href="#" className="hover:text-accent transition-colors">Terms of Service</Link>
+            <Link href="/privacy" className="hover:text-accent transition-colors">Privacy Policy</Link>
+            <Link href="/terms" className="hover:text-accent transition-colors">Terms of Service</Link>
           </div>
         </div>
       </div>
