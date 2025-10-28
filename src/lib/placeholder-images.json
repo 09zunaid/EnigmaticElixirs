@@ -1,10 +1,10 @@
 {
   "placeholderImages": [
     {
-      "id": "hero-perfume",
-      "description": "A stylish, minimalist photo of a perfume bottle and some natural ingredients.",
-      "imageUrl": "https://images.unsplash.com/photo-1541643600914-78b084683601?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxwZXJmdW1lJTIwYm90dGxlc3xlbnwwfHx8fDE3NjE3NjIzMjR8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "perfume bottles"
+      "id": "hero-perfume-luxury",
+      "description": "A collection of artisanal perfume bottles and ingredients on a dark, elegant surface.",
+      "imageUrl": "https://images.unsplash.com/photo-1594035918252-8789315b8166?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxsdXh1cnklMjBwZXJmdW1lfGVufDB8fHx8MTc2MjAwNTY3M3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "luxury perfume"
     },
     {
       "id": "ingredient-citrus",

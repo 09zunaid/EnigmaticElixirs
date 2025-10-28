@@ -10,7 +10,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { ArrowRight, Beaker, Bot, Feather, Sparkles } from 'lucide-react';
 import { motion } from 'framer-motion';
 
-const heroImage = PlaceHolderImages.find((img) => img.id === 'hero-perfume');
+const heroImage = PlaceHolderImages.find((img) => img.id === 'hero-perfume-luxury');
 const featuredIngredients = [
   PlaceHolderImages.find((img) => img.id === 'ingredient-citrus'),
   PlaceHolderImages.find((img) => img.id === 'ingredient-floral'),
@@ -60,7 +60,7 @@ const itemVariants = {
 export default function Home() {
   return (
     <div className="flex flex-col">
-      <section className="relative h-[60vh] md:h-[80vh] w-full flex items-center justify-center text-center text-white">
+      <section className="relative h-[70vh] md:h-[90vh] w-full flex items-center justify-center text-center text-white">
         {heroImage && (
           <Image
             src={heroImage.imageUrl}
@@ -76,20 +76,22 @@ export default function Home() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
-          className="relative z-10 flex flex-col items-center space-y-6 px-4">
+          className="relative z-10 flex flex-col items-center space-y-8 px-4">
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-            className="font-headline text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white">
-            Your Essence, Bottled
+            className="font-headline text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-white"
+            style={{textShadow: '0 2px 15px rgba(0,0,0,0.5)'}}>
+            Compose Your Enigma
           </motion.h1>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-            className="max-w-2xl text-lg md:text-xl text-white/90">
-            Discover the art of personal perfumery. A journey to a fragrance that is an extension of you.
+            className="max-w-3xl text-lg md:text-xl text-white/90"
+            style={{textShadow: '0 1px 5px rgba(0,0,0,0.4)'}}>
+            An alchemical journey into bespoke perfumery. We provide the elements, you compose the soul of your scent.
           </motion.p>
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
@@ -101,7 +103,7 @@ export default function Home() {
                 Begin Your Creation <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
-            <Button asChild size="lg" variant="outline" className="border-accent text-accent hover:bg-accent hover:text-accent-foreground">
+            <Button asChild size="lg" variant="outline" className="border-white/50 text-white bg-transparent hover:bg-white/10 hover:text-white">
               <Link href="/ingredients">Explore Ingredients</Link>
             </Button>
           </motion.div>
