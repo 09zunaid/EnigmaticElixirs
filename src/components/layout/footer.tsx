@@ -12,7 +12,7 @@ export function Footer() {
           <div className="lg:col-span-2">
             <Link href="/" className="flex items-center gap-2 mb-4">
               <Icons.Logo className="h-8 w-8 text-primary" />
-              <span className="font-brand text-4xl font-semibold tracking-wider text-primary">
+              <span className="font-headline text-3xl font-semibold tracking-wider text-primary">
                 Enigmatic Elixirs
               </span>
             </Link>
