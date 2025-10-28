@@ -3,7 +3,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Menu, User } from 'lucide-react';
+import { Menu, User, Wand2, BookOpen, Calendar, Gift } from 'lucide-react';
 import { useState } from 'react';
 
 import { cn } from '@/lib/utils';
@@ -21,10 +21,10 @@ import {
 import { motion } from 'framer-motion';
 
 const navItems = [
-  { href: '/create', label: 'Create' },
-  { href: '/ingredients', label: 'Ingredients' },
-  { href: '/consultation', label: 'Consultation' },
-  { href: '/gift-card', label: 'Gift Card' },
+  { href: '/create', label: 'Create', icon: <Wand2 /> },
+  { href: '/ingredients', label: 'Ingredients', icon: <BookOpen /> },
+  { href: '/consultation', label: 'Consultation', icon: <Calendar /> },
+  { href: '/gift-card', label: 'Gift Card', icon: <Gift /> },
 ];
 
 export function Header() {
@@ -37,12 +37,13 @@ export function Header() {
         key={item.href}
         href={item.href}
         className={cn(
-          'relative rounded-md px-3 py-2 text-base font-medium text-foreground/80 transition-colors hover:text-accent-foreground',
-          isMobile ? 'w-full text-lg' : ''
+          'relative rounded-md px-3 py-2 text-base font-medium text-foreground/80 transition-colors hover:text-accent-foreground flex items-center gap-2',
+          isMobile ? 'w-full text-lg' : 'text-lg'
         )}
         onMouseOver={() => setHoveredPath(item.href)}
         onMouseLeave={() => setHoveredPath(pathname)}
       >
+        {item.icon}
         <span className="relative z-10">{item.label}</span>
         {item.href === hoveredPath && (
           <motion.div
