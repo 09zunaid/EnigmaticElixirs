@@ -4,6 +4,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Menu, User } from 'lucide-react';
+import { useState } from 'react';
 
 import { cn } from '@/lib/utils';
 import { Icons } from '@/components/icons';
@@ -17,7 +18,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
-import { useEffect, useState } from 'react';
+import { motion } from 'framer-motion';
 
 const navItems = [
   { href: '/create', label: 'Create' },
@@ -28,15 +29,7 @@ const navItems = [
 
 export function Header() {
   const pathname = usePathname();
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  const [hoveredPath, setHoveredPath] = useState(pathname);
 
   const renderNavLinks = (isMobile = false) =>
     navItems.map((item) => (
@@ -44,38 +37,54 @@ export function Header() {
         key={item.href}
         href={item.href}
         className={cn(
-          'transition-colors hover:text-accent',
-          pathname === item.href ? 'text-accent font-semibold' : 'text-foreground/80',
-          isMobile ? 'text-lg font-medium p-2' : 'text-base font-medium'
+          'relative rounded-md px-3 py-2 text-base font-medium text-foreground/80 transition-colors hover:text-accent-foreground',
+          isMobile ? 'w-full text-lg' : ''
         )}
+        onMouseOver={() => setHoveredPath(item.href)}
+        onMouseLeave={() => setHoveredPath(pathname)}
       >
-        {item.label}
+        <span className="relative z-10">{item.label}</span>
+        {item.href === hoveredPath && (
+          <motion.div
+            className="absolute bottom-0 left-0 h-full w-full rounded-md bg-accent"
+            layoutId="navbar"
+            aria-hidden="true"
+            transition={{
+              type: 'spring',
+              stiffness: 350,
+              damping: 30,
+            }}
+          />
+        )}
+         {item.href === pathname && !hoveredPath.includes(item.href) && (
+          <motion.div
+            className="absolute bottom-0 left-0 h-full w-full rounded-md bg-accent/50"
+            aria-hidden="true"
+          />
+        )}
       </Link>
     ));
 
   return (
     <header
-      className={cn(
-        'sticky top-0 z-50 w-full transition-all duration-300',
-        isScrolled ? 'border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60' : 'bg-transparent'
-      )}
+      className={'sticky top-4 z-50 mx-auto w-[95%] max-w-7xl transition-all duration-300'}
     >
-      <div className="container mx-auto flex h-16 items-center justify-between px-4">
+      <div className="relative flex h-16 items-center justify-between rounded-2xl border border-border/20 bg-background/70 px-4 shadow-lg backdrop-blur-xl supports-[backdrop-filter]:bg-background/60">
         <Link href="/" className="flex items-center gap-2">
           <Icons.Logo className="h-7 w-7 text-primary" />
-          <span className="font-headline text-2xl font-semibold tracking-wider text-primary">
+          <span className="font-headline text-3xl font-semibold text-primary">
             Enigmatic Elixirs
           </span>
         </Link>
 
-        <nav className="hidden md:flex items-center gap-6">
+        <nav className="hidden items-center gap-2 p-1 md:flex">
           {renderNavLinks()}
         </nav>
 
         <div className="flex items-center gap-3">
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <Button variant="ghost" size="icon">
+              <Button variant="ghost" size="icon" className='rounded-full'>
                 <User className="h-5 w-5" />
                 <span className="sr-only">User Profile</span>
               </Button>
