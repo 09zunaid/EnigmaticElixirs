@@ -3,7 +3,7 @@
     {
       "id": "hero-perfume-luxury",
       "description": "An ornate, spherical perfume bottle on a dark, silky cloth with water droplets.",
-      "imageUrl": "https://storage.googleapis.com/aai-web-samples/enigmatic-elixirs-hero.jpg",
+      "imageUrl": "https://eu-central.storage.cloudconvert.com/tasks/f4e7a175-24c7-4e35-9d41-cd0251eb223d/Lucid_Origin_a_cinematic_photo_of_a_delicate_scent_bottle_with_0.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=cloudconvert-production%2F20251028%2Ffra%2Fs3%2Faws4_request&X-Amz-Date=20251028T201506Z&X-Amz-Expires=86400&X-Amz-Signature=0911a775874f7db961ae15da5f4ccd8caefb81dfd65f056a92f983c5e5123a0c&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3D%22Lucid_Origin_a_cinematic_photo_of_a_delicate_scent_bottle_with_0.jpg%22&response-content-type=image%2Fjpeg&x-id=GetObject",
       "imageHint": "ornate perfume"
     },
     {

@@ -35,6 +35,12 @@ const nextConfig: NextConfig = {
         port: '',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'eu-central.storage.cloudconvert.com',
+        port: '',
+        pathname: '/**',
+      },
     ],
   },
 };
