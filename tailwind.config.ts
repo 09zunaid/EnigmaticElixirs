@@ -18,7 +18,7 @@ export default {
     extend: {
       fontFamily: {
         body: ['Quattrocento', 'serif'],
-        headline: ['Cinzel', 'serif'],
+        headline: ['Cormorant Garamond', 'serif'],
         code: ['monospace'],
       },
       colors: {
