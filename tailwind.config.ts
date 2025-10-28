@@ -17,7 +17,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        body: ['Inter', 'sans-serif'],
+        body: ['Quattrocento', 'serif'],
         headline: ['Cinzel', 'serif'],
         code: ['monospace'],
       },
