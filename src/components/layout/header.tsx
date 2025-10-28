@@ -46,7 +46,7 @@ export function Header() {
         className={cn(
           'transition-colors hover:text-accent',
           pathname === item.href ? 'text-accent font-semibold' : 'text-foreground/80',
-          isMobile ? 'text-lg font-medium p-2' : 'text-sm font-medium'
+          isMobile ? 'text-lg font-medium p-2' : 'text-base font-medium'
         )}
       >
         {item.label}
