@@ -21,10 +21,10 @@ import {
 import { motion } from 'framer-motion';
 
 const navItems = [
-  { href: '/create', label: 'Create' },
-  { href: '/ingredients', label: 'Ingredients' },
-  { href: '/consultation', label: 'Consultation' },
-  { href: '/gift-card', label: 'Gift Card' },
+  { href: '/create', label: 'Create', icon: <Wand2 /> },
+  { href: '/ingredients', label: 'Ingredients', icon: <BookOpen /> },
+  { href: '/consultation', label: 'Consultation', icon: <Calendar /> },
+  { href: '/gift-card', label: 'Gift Card', icon: <Gift /> },
 ];
 
 export function Header() {
@@ -37,12 +37,13 @@ export function Header() {
         key={item.href}
         href={item.href}
         className={cn(
-          'relative rounded-md px-3 py-2 text-base font-medium text-foreground/80 transition-colors hover:text-accent-foreground',
+          'relative flex items-center gap-2 rounded-md px-3 py-2 font-medium text-foreground/80 transition-colors hover:text-accent-foreground',
           isMobile ? 'w-full text-lg' : 'text-lg'
         )}
         onMouseOver={() => setHoveredPath(item.href)}
         onMouseLeave={() => setHoveredPath(pathname)}
       >
+        <span className="relative z-10">{item.icon}</span>
         <span className="relative z-10">{item.label}</span>
         {item.href === hoveredPath && (
           <motion.div
@@ -69,7 +70,7 @@ export function Header() {
     <header
       className={'sticky top-4 z-50 mx-auto w-[95%] max-w-7xl transition-all duration-300'}
     >
-      <div className="relative flex h-16 items-center justify-between rounded-2xl border border-border/20 bg-background/70 px-4 shadow-lg backdrop-blur-xl supports-[backdrop-filter]:bg-background/60">
+      <div className="relative flex h-16 items-center justify-between rounded-2xl border border-border/20 bg-background px-4 shadow-lg">
         <Link href="/" className="flex items-center gap-2">
           <Icons.Logo className="h-7 w-7 text-primary" />
           <span className="font-headline text-3xl font-semibold text-primary">
