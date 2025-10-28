@@ -1,7 +1,11 @@
+
+'use client';
+
 import Image from 'next/image';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent } from '@/components/ui/card';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
+import { motion } from 'framer-motion';
 
 const teamMembers = [
   {
@@ -44,45 +48,71 @@ export default function AboutPage() {
         )}
         <div className="absolute inset-0 bg-primary/80" />
         <div className="relative z-10 p-4">
-            <h1 className="font-headline text-4xl md:text-6xl font-bold">The Art of Scent</h1>
-            <p className="mt-4 max-w-2xl text-lg md:text-xl text-background/90">
+            <motion.h1 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="font-headline text-4xl md:text-6xl font-bold">The Art of Scent</motion.h1>
+            <motion.p 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="mt-4 max-w-2xl text-lg md:text-xl text-background/90">
             We believe fragrance is a form of art, an expression of identity, and a vessel for memory.
-            </p>
+            </motion.p>
         </div>
       </section>
 
       <section className="py-20 md:py-24 bg-background">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
+          <motion.div 
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+            className="max-w-4xl mx-auto text-center">
             <h2 className="font-headline text-3xl md:text-4xl text-primary">Our Philosophy</h2>
             <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
               Enigmatic Elixirs was born from a desire to return to the roots of perfumery—a craft built on passion, quality ingredients, and personal stories. In a world of mass-produced fragrances, we offer an alternative: a scent that is uniquely, unequivocally you. We combine age-old techniques with modern sensibilities to help you create not just a perfume, but a personal elixir.
             </p>
-          </div>
+          </motion.div>
         </div>
       </section>
 
       <section className="py-20 md:py-24 bg-secondary">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
+          <motion.div 
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+            className="text-center mb-12">
             <h2 className="font-headline text-3xl md:text-5xl">Meet the Artisans</h2>
             <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
               The heart of our studio lies in our team's collective passion and expertise.
             </p>
-          </div>
+          </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {teamMembers.map((member) => (
-              <Card key={member.name} className="text-center border-0 shadow-none bg-transparent">
-                <CardContent className="flex flex-col items-center">
-                    <Avatar className="h-32 w-32 mb-4 ring-4 ring-accent">
-                        <AvatarImage src={member.avatar} alt={member.name} />
-                        <AvatarFallback>{member.avatarFallback}</AvatarFallback>
-                    </Avatar>
-                    <h3 className="font-headline text-2xl">{member.name}</h3>
-                    <p className="text-accent font-semibold mb-2">{member.role}</p>
-                    <p className="text-muted-foreground">{member.bio}</p>
-                </CardContent>
-              </Card>
+            {teamMembers.map((member, index) => (
+              <motion.div
+                key={member.name}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
+                <Card className="text-center border-0 shadow-none bg-transparent">
+                  <CardContent className="flex flex-col items-center">
+                      <Avatar className="h-32 w-32 mb-4 ring-4 ring-accent">
+                          <AvatarImage src={member.avatar} alt={member.name} />
+                          <AvatarFallback>{member.avatarFallback}</AvatarFallback>
+                      </Avatar>
+                      <h3 className="font-headline text-2xl">{member.name}</h3>
+                      <p className="text-accent font-semibold mb-2">{member.role}</p>
+                      <p className="text-muted-foreground">{member.bio}</p>
+                  </CardContent>
+                </Card>
+              </motion.div>
             ))}
           </div>
         </div>
