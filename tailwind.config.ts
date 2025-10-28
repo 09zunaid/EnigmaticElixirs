@@ -18,7 +18,7 @@ export default {
     extend: {
       fontFamily: {
         body: ['Inter', 'sans-serif'],
-        headline: ['Cormorant Garamond', 'serif'],
+        headline: ['Cinzel', 'serif'],
         code: ['monospace'],
       },
       colors: {
