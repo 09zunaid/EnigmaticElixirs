@@ -1,3 +1,4 @@
+
 import Link from 'next/link';
 import { Icons } from '@/components/icons';
 import { Input } from '@/components/ui/input';
@@ -11,7 +12,7 @@ export function Footer() {
           <div className="lg:col-span-2">
             <Link href="/" className="flex items-center gap-2 mb-4">
               <Icons.Logo className="h-8 w-8 text-primary" />
-              <span className="font-brand text-4xl font-semibold text-primary">
+              <span className="font-headline text-4xl font-normal text-primary">
                 Enigmatic Elixirs
               </span>
             </Link>

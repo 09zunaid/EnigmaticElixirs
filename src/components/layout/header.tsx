@@ -1,3 +1,4 @@
+
 'use client';
 
 import Link from 'next/link';
@@ -62,7 +63,7 @@ export function Header() {
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
         <Link href="/" className="flex items-center gap-2">
           <Icons.Logo className="h-7 w-7 text-primary" />
-          <span className="font-brand text-3xl font-semibold text-primary">
+          <span className="font-headline text-3xl font-normal text-primary">
             Enigmatic Elixirs
           </span>
         </Link>
@@ -101,7 +102,7 @@ export function Header() {
               <div className="p-6">
                 <Link href="/" className="flex items-center gap-2 mb-8">
                   <Icons.Logo className="h-7 w-7 text-primary" />
-                  <span className="font-brand text-3xl font-semibold text-primary">
+                  <span className="font-headline text-3xl font-normal text-primary">
                     Enigmatic Elixirs
                   </span>
                 </Link>
