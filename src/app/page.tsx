@@ -46,19 +46,18 @@ export default function Home() {
             data-ai-hint={heroImage.imageHint}
           />
         )}
-        <div className="absolute inset-0 bg-primary/70" />
+        <div className="absolute inset-0 bg-black/60" />
         <div className="relative z-10 flex flex-col items-center space-y-6 px-4">
-          <h1 className="font-headline text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-background">
-            Craft Your Signature Scent
+          <h1 className="font-headline text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white">
+            Your Essence, Bottled
           </h1>
-          <p className="max-w-2xl text-lg md:text-xl text-background/90">
-            An olfactory journey to create a fragrance that is uniquely yours.
-            Start with our AI-powered Scent Profile Tool or build from scratch.
+          <p className="max-w-2xl text-lg md:text-xl text-white/90">
+            Discover the art of personal perfumery. A journey to a fragrance that is an extension of you.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
               <Link href="/create">
-                Start Creating <ArrowRight className="ml-2 h-5 w-5" />
+                Begin Your Creation <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
             <Button asChild size="lg" variant="outline" className="border-accent text-accent hover:bg-accent hover:text-accent-foreground">
