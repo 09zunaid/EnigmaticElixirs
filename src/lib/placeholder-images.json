@@ -1,3 +1,52 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero-perfume",
+      "description": "A stylish, minimalist photo of a perfume bottle and some natural ingredients.",
+      "imageUrl": "https://images.unsplash.com/photo-1612798187471-665afc562324?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxwZXJmdW1lJTIwbWluaW1hbGlzdHxlbnwwfHx8fDE3NjE2NzgwNjR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "perfume minimalist"
+    },
+    {
+      "id": "ingredient-citrus",
+      "description": "Vibrant citrus fruits like lemons and oranges.",
+      "imageUrl": "https://images.unsplash.com/photo-1517260739337-6799d239ce83?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxjaXRydXMlMjBmcnVpdHxlbnwwfHx8fDE3NjE1NzM3NTV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "citrus fruit"
+    },
+    {
+      "id": "ingredient-floral",
+      "description": "A beautiful bouquet of various flowers.",
+      "imageUrl": "https://images.unsplash.com/photo-1604323990536-e5452c0507c1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxmbG93ZXIlMjBib3VxdWV0fGVufDB8fHx8MTc2MTU4MzE3Mnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "flower bouquet"
+    },
+    {
+      "id": "ingredient-woody",
+      "description": "Pieces of sandalwood or cedarwood.",
+      "imageUrl": "https://images.unsplash.com/photo-1564462670440-725c000bcfe1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxzYW5kYWx3b29kfGVufDB8fHx8MTc2MTY3ODA2NXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "sandalwood"
+    },
+    {
+      "id": "ingredient-spicy",
+      "description": "A collection of spices like cinnamon sticks and star anise.",
+      "imageUrl": "https://images.unsplash.com/photo-1532336414038-cf19250c5757?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxzcGljZXN8ZW58MHx8fHwxNzYxNjc4MDY0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "spices"
+    },
+    {
+      "id": "ingredient-fresh",
+      "description": "A fresh green leaf with water droplets on it",
+      "imageUrl": "https://images.unsplash.com/photo-1565769966111-8bd50d3e7554?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxncmVlbiUyMGxlYWZ8ZW58MHx8fHwxNzYxNjY1NzE4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "green leaf"
+    },
+    {
+      "id": "ingredient-oriental",
+      "description": "Amber resin in a warm, glowing light",
+      "imageUrl": "https://images.unsplash.com/photo-1666557389078-fb9bffc09a9a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxhbWJlciUyMHJlc2lufGVufDB8fHx8MTc2MTY3ODA2NHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "amber resin"
+    },
+    {
+      "id": "ingredient-fruity",
+      "description": "A bowl of mixed berries and fruits",
+      "imageUrl": "https://images.unsplash.com/photo-1556048029-9c5edf1aa695?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxtaXhlZCUyMGJlcnJpZXN8ZW58MHx8fHwxNzYxNjcxMjk5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "mixed berries"
+    }
+  ]
 }
