@@ -2,9 +2,9 @@
   "placeholderImages": [
     {
       "id": "hero-perfume-luxury",
-      "description": "A luxurious perfume bottle with sprinkled water droplets on a reflective surface.",
-      "imageUrl": "https://images.unsplash.com/photo-1541643600914-78b084683601?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBwZXJmdW1lJTIwd2F0ZXIlMjBkcm9wc3xlbnwwfHx8fDE3NjIxNzI0NTF8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "luxury perfume"
+      "description": "An ornate, spherical perfume bottle on a dark, silky cloth with water droplets.",
+      "imageUrl": "https://storage.googleapis.com/aai-web-samples/enigmatic-elixirs-hero.jpg",
+      "imageHint": "ornate perfume"
     },
     {
       "id": "ingredient-citrus",
