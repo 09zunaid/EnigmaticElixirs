@@ -70,7 +70,7 @@ export function Header() {
     <header
       className={'sticky top-4 z-50 mx-auto w-[95%] max-w-7xl transition-all duration-300'}
     >
-      <div className="relative flex h-16 items-center justify-between rounded-2xl border border-border/20 bg-background px-4 shadow-lg">
+      <div className="relative flex h-16 items-center justify-between rounded-2xl border border-border/20 bg-background/80 px-4 shadow-lg backdrop-blur-sm">
         <Link href="/" className="flex items-center gap-2">
           <Icons.Logo className="h-7 w-7 text-primary" />
           <span className="font-headline text-3xl font-semibold text-primary">
