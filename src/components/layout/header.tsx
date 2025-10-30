@@ -21,10 +21,10 @@ import {
 import { motion } from 'framer-motion';
 
 const navItems = [
-  { href: '/create', label: 'Create', icon: <Wand2 /> },
-  { href: '/ingredients', label: 'Ingredients', icon: <BookOpen /> },
-  { href: '/consultation', label: 'Consultation', icon: <Calendar /> },
-  { href: '/gift-card', label: 'Gift Card', icon: <Gift /> },
+  { href: '/create', label: 'Create', icon: <Wand2 className="h-5 w-5" /> },
+  { href: '/ingredients', label: 'Ingredients', icon: <BookOpen className="h-5 w-5" /> },
+  { href: '/consultation', label: 'Consultation', icon: <Calendar className="h-5 w-5" /> },
+  { href: '/gift-card', label: 'Gift Card', icon: <Gift className="h-5 w-5" /> },
 ];
 
 export function Header() {
@@ -37,8 +37,8 @@ export function Header() {
         key={item.href}
         href={item.href}
         className={cn(
-          'relative flex items-center gap-2 rounded-md px-3 py-2 font-medium text-foreground/80 transition-colors hover:text-accent-foreground',
-          isMobile ? 'w-full text-lg' : 'text-lg'
+          'relative flex items-center gap-2 rounded-md px-4 py-2 text-sm font-medium text-foreground/80 transition-colors hover:text-accent-foreground',
+          isMobile ? 'w-full text-lg' : ''
         )}
         onMouseOver={() => setHoveredPath(item.href)}
         onMouseLeave={() => setHoveredPath(pathname)}
@@ -50,17 +50,12 @@ export function Header() {
             className="absolute bottom-0 left-0 h-full w-full rounded-md bg-accent"
             layoutId="navbar"
             aria-hidden="true"
+            style={{ originY: '0px' }}
             transition={{
               type: 'spring',
               stiffness: 350,
               damping: 30,
             }}
-          />
-        )}
-         {item.href === pathname && !hoveredPath.includes(item.href) && (
-          <motion.div
-            className="absolute bottom-0 left-0 h-full w-full rounded-md bg-accent/50"
-            aria-hidden="true"
           />
         )}
       </Link>
@@ -70,7 +65,7 @@ export function Header() {
     <header
       className={'sticky top-4 z-50 mx-auto w-[95%] max-w-7xl transition-all duration-300'}
     >
-      <div className="relative flex h-16 items-center justify-between rounded-2xl border border-border/20 bg-background/80 px-4 shadow-lg backdrop-blur-sm">
+      <div className="relative flex h-20 items-center justify-between rounded-2xl border border-border/20 bg-background/80 px-6 shadow-lg backdrop-blur-sm">
         <Link href="/" className="flex items-center gap-2">
           <Icons.Logo className="h-7 w-7 text-primary" />
           <span className="font-headline text-3xl font-semibold text-primary">
@@ -78,7 +73,7 @@ export function Header() {
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-2 p-1 md:flex">
+        <nav className="hidden items-center gap-1 rounded-full border border-border/20 bg-background/50 p-2 md:flex">
           {renderNavLinks()}
         </nav>
 

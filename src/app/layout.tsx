@@ -6,12 +6,15 @@ import { cn } from '@/lib/utils';
 import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
 import { Toaster } from '@/components/ui/toaster';
+import { AnimatePresence, motion } from 'framer-motion';
+import { usePathname } from 'next/navigation';
 
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const pathname = usePathname();
   return (
     <html lang="en" className="scroll-smooth dark">
       <head>
@@ -22,9 +25,18 @@ export default function RootLayout({
       <body className={cn('font-body antialiased')}>
         <div className="flex min-h-screen flex-col">
           <Header />
-          <main className="flex-1">
-            {children}
-          </main>
+          <AnimatePresence mode="wait" initial={false}>
+            <motion.main
+              key={pathname}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.3 }}
+              className="flex-1"
+            >
+              {children}
+            </motion.main>
+          </AnimatePresence>
           <Footer />
         </div>
         <Toaster />
