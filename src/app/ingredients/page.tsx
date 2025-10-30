@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useState } from 'react';
@@ -14,7 +15,6 @@ import {
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { AnimatePresence, motion } from 'framer-motion';
 
 const scentProfiles: ScentProfile[] = ['Citrus', 'Floral', 'Woody', 'Spicy', 'Fresh', 'Oriental', 'Fruity', 'Gourmand'];
 
@@ -53,18 +53,12 @@ export default function IngredientsPage() {
         ))}
       </div>
       
-      <motion.div layout className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 md:gap-6">
-        <AnimatePresence>
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 md:gap-6">
         {filteredIngredients.map(ingredient => {
           const img = PlaceHolderImages.find(p => p.id === ingredient.imageId);
           return (
-            <motion.div
-              layout
+            <div
               key={ingredient.id}
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.8 }}
-              transition={{ duration: 0.3 }}
             >
               <Card
                 onClick={() => setSelectedIngredient(ingredient)}
@@ -87,11 +81,10 @@ export default function IngredientsPage() {
                   </div>
                 </CardContent>
               </Card>
-            </motion.div>
+            </div>
           );
         })}
-        </AnimatePresence>
-      </motion.div>
+      </div>
 
       <Dialog open={!!selectedIngredient} onOpenChange={(open) => !open && setSelectedIngredient(null)}>
         <DialogContent className="sm:max-w-[600px] grid-cols-1 md:grid-cols-2 gap-6 p-0">

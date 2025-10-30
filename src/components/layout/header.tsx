@@ -29,7 +29,6 @@ const navItems = [
 
 export function Header() {
   const pathname = usePathname();
-  const [hoveredPath, setHoveredPath] = useState(pathname);
 
   const renderNavLinks = (isMobile = false) =>
     navItems.map((item) => (
@@ -37,27 +36,15 @@ export function Header() {
         key={item.href}
         href={item.href}
         className={cn(
-          'relative flex items-center gap-2 rounded-md px-4 py-2 text-sm font-medium text-foreground/80 transition-colors hover:text-accent-foreground',
+          'relative flex items-center gap-2 rounded-md px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground',
+          {
+            'bg-accent text-accent-foreground': pathname === item.href,
+          },
           isMobile ? 'w-full text-lg' : ''
         )}
-        onMouseOver={() => setHoveredPath(item.href)}
-        onMouseLeave={() => setHoveredPath(pathname)}
       >
-        <span className="relative z-10">{item.icon}</span>
-        <span className="relative z-10">{item.label}</span>
-        {item.href === hoveredPath && (
-          <motion.div
-            className="absolute bottom-0 left-0 h-full w-full rounded-md bg-accent"
-            layoutId="navbar"
-            aria-hidden="true"
-            style={{ originY: '0px' }}
-            transition={{
-              type: 'spring',
-              stiffness: 350,
-              damping: 30,
-            }}
-          />
-        )}
+        <span>{item.icon}</span>
+        <span>{item.label}</span>
       </Link>
     ));
 
